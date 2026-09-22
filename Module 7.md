@@ -46,6 +46,13 @@ int main() {
 
 
 Output:
+
+
+
+
+
+
+
 <img width="449" height="100" alt="image" src="https://github.com/user-attachments/assets/be881c38-32f4-42e1-a327-73858975f981" />
 
 
@@ -99,6 +106,12 @@ int add(struct numbers n){
 
 
 Output:
+
+
+
+
+
+
 <img width="204" height="228" alt="image" src="https://github.com/user-attachments/assets/01ebf75c-5391-4a57-a566-70b45e353f3f" />
 
 
@@ -156,6 +169,11 @@ int main(){
 
 
 Output:
+
+
+
+
+
 <img width="584" height="196" alt="image" src="https://github.com/user-attachments/assets/d7c8feab-bc95-4641-a2da-c0938ad0c129" />
 
 
@@ -221,6 +239,11 @@ int main(){
 
 
 Output:
+
+
+
+
+
 <img width="509" height="239" alt="image" src="https://github.com/user-attachments/assets/1eaa1243-ed24-4796-9ae4-cbb00759e040" />
 
 
@@ -306,6 +329,12 @@ int main() {
 
 
 Output:
+
+
+
+
+
+
 <img width="312" height="214" alt="image" src="https://github.com/user-attachments/assets/d9ea9a54-7fd0-4780-8e17-16989b271d7a" />
 
 
