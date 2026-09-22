@@ -10,9 +10,48 @@ Algorithm:
  
 Program:
 
+```
+struct Node{
+    int data; 
+    struct Node *next;
+}*head;
+
+void search(int data)
+{
+ 
+ struct Node*temp=head;
+ int flag=0;
+ int i=0;
+ while(temp->data!=data)
+ {
+     i++;
+     if(temp->next!=NULL)
+     temp=temp->next;
+     else break;
+     
+ }
+ if(temp->data==data)
+ {
+     printf("item %d found at location %d",data,i+1);
+     flag=1;
+ }
+ if(flag==0)
+ {
+     printf("Item not found");
+ }
+ 
+    
+}
+
+```
 //type your code here
 
 Output:
+
+
+
+<img width="584" height="388" alt="image" src="https://github.com/user-attachments/assets/c2893714-5dc9-4818-a72d-fcfd23db70fb" />
+
 
 //paste your output here
 
@@ -33,10 +72,38 @@ Algorithm:
 4.	Call the insert function and perform other linked list operations as needed.
  
 Program:
+```
+
+struct Node{
+    int data; 
+    struct Node *next;
+}*head;
+
+
+void insert(int data)
+{
+    struct Node* n=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* temp=head;
+    n->data=data;
+    n->next=NULL;
+    if(head==NULL){
+        
+        head=n;
+    }else{
+        while(temp->next!=NULL){
+            temp=temp->next;
+        }
+        temp->next=n;
+        
+    }
+}
+```
 
 //type your code here
 
 Output:
+<img width="288" height="419" alt="image" src="https://github.com/user-attachments/assets/be1e918d-5eb7-4645-b3fb-a8ec9c99e49b" />
+
 
 //paste your output here
 
@@ -58,9 +125,35 @@ Algorithm:
  
 Program:
 
+
+```
+
+struct Node
+{
+    struct Node *prev;
+    struct Node *next;
+    int data;
+}*head;
+
+void display()
+{
+    struct Node* temp=head;
+    while(temp!=NULL)
+    {
+        printf("%d\n",temp->data);
+        temp=temp->next;
+    }
+    
+}
+```
+
 //type your code here
 
 Output:
+
+
+
+<img width="451" height="545" alt="image" src="https://github.com/user-attachments/assets/7b83aa1d-0a26-4dc2-aec9-6761f2c489cc" />
 
 //paste your output here
 
@@ -83,9 +176,40 @@ Algorithm:
  
 Program:
 
+```
+struct Node
+{
+    struct Node *prev;
+    struct Node *next;
+    float data;
+}*head;
+
+void insert(float data)
+{
+    struct Node* n=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* temp=head;
+    n->data=data;
+    n->next=NULL;
+    if(head==NULL){
+        head=n;
+        return;
+    }
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=n;
+    
+    
+}
+
+
+```
 //type your code here
 
 Output:
+
+
+<img width="286" height="314" alt="image" src="https://github.com/user-attachments/assets/4ce390b2-4e09-4648-a9e7-b9887deaaabf" />
 
 //paste your output here
 
@@ -124,10 +248,87 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 
 Program:
+```
 
+
+struct Node
+{
+    int data; 
+    struct Node *next;
+}*head;
+void display()
+{
+    struct Node* temp=head;
+    while(temp!=NULL)
+    {
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+}
+void insert(int data)
+{
+    struct Node* temp=head;
+    struct Node* ptr=(struct Node*)malloc(sizeof(struct Node));
+    ptr->data=data;
+    ptr->next=NULL;
+    if(head==NULL)
+    {
+        head=ptr;
+    }else
+    {
+        while(temp->next!=NULL)        {
+            temp=temp->next;
+        }
+        temp->next=ptr;
+    }
+}
+void search(int data)
+{
+    int i=1;
+    struct Node* temp=head;
+    if(head==NULL)
+    {
+        printf("Elements not found");
+    }else
+    {
+        while(temp!=NULL)
+        {
+            
+            if(temp->data==data)
+            {
+                printf("item %d found at location %d\n",data,i);
+                return;
+            }
+            i++;
+            temp=temp->next;
+        }
+        printf("Item not found\n");
+    }
+}
+void delete()
+{
+    struct Node* temp=head;
+    if(head==NULL)
+    {
+        printf("UNDERFLOW");
+    }else
+    {
+        head=head->next;
+        free(temp);
+        printf("Node deleted\n");
+    }
+    
+}
+
+```
 //type your code here
 
 Output:
+
+
+
+<img width="594" height="470" alt="image" src="https://github.com/user-attachments/assets/689e4443-9cf4-48b2-bbb7-edc87a4a77a3" />
+
 
 //paste your output here
 
